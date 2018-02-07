@@ -1,0 +1,154 @@
+  <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>奇安在线</title>
+    <link rel="stylesheet" href="../static/lib/bootstrap-3.3.7/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../static/lib/easyui153/themes/bootstrap/easyui.css">
+    <!--<link rel="stylesheet" type="text/css" href="lib/easyui153/themes/icon.css">-->
+    <link rel="stylesheet" href="../static/lib/font-awesome-321/css/font-awesome.min.css">
+<link rel="stylesheet" href="../static/lib/nprogress/nprogress.css">
+
+    <style>
+        .layout-split-east {
+            border-left: 3px solid #eee;
+        }
+
+        .layout-split-south {
+            border-top: 3px solid #eee;
+        }
+
+        .dt-abs {
+            /*position: absolute;*/
+            margin-top: 5px;
+            font-size: larger;
+        }
+
+        #north {
+            padding: 0px;
+        }
+
+        .overlay {
+            fill: none;
+            pointer-events: all;
+        }
+
+        .nodetext {
+            font-size: 10px;
+            font-family: SimSun;
+            fill: #000000;
+        }
+
+        .linetext {
+            font-size: 12px;
+            font-family: SimSun;
+            fill: #1f77b4;
+            fill-opacity: 0.0;
+        }
+
+        .circleImg {
+            stroke: #ff7f0e;
+            stroke-width: 1.5px;
+        }
+
+        .nodetooltip {
+            font-family: "Serif";
+            font-size: 14px;
+            width: auto;
+            height: auto;
+            position: absolute;
+            text-align: left;
+            border-style: solid;
+            border-width: 1px;
+            border-color: #666666;
+            background-color: #eee;
+            border-radius: 2px;
+            padding: 5px;
+        }
+
+        .popover {
+            width: 150px;
+        }
+
+        .popover-content- > p {
+            font-size: 8px;
+        }
+
+        .popover-title {
+            height: 25px;
+            padding: 4px;
+        }
+        .tabs-header{
+            background-color: #fff;
+        }
+    </style>
+
+</head>
+<body class="easyui-layout layout">
+<!--<div data-options="region:'west',title:'West',split:true" style="width:100px;"></div>-->
+<div id="dt_main_tabs" class="easyui-tabs" data-options="region:'center',title:'',fit:false" style="background:#eee;">
+    <div id="center" title="信息关联图" style="overflow:auto;padding:2px;display:none;background:#fff;">
+        <div id="main_left_hove"
+             style="z-index: 9999; position: fixed ! important; left: 5px; margin-top: 2px;font-size: 8px;">
+            <div class="btn-group btn-group-xs">
+                <button id="dt_muen" type="button" class="btn btn-default" aria-label="Left Align">
+                    <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+                </button>
+            </div>
+            <br>
+            <button id="dt_rel" type="button" class="btn btn-default btn-xs" aria-label="Left Align">
+                <span class="glyphicon glyphicon-transfer" aria-hidden="true"></span>
+            </button>
+            <br>
+            <button id="dt_dwn_cvs" type="button" class="btn btn-default btn-xs" aria-label="Left Align">
+                <span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>
+            </button>
+            <br>
+            <button id="dt_fresh" type="button" class="btn btn-default btn-xs" aria-label="Left Align">
+                <span class="glyphicon glyphicon-refresh" aria-hidden="true"></span>
+            </button>
+        </div>
+
+        <div id="main_right_hove"
+             style="z-index: 9999; position: fixed ! important; right: 16px; margin-top: 2px;font-size: 8px;">
+            <div class="btn-group btn-group-xs">
+                <button id="dt_right_muen" type="button" class="btn btn-default" aria-label="Left Align">
+                    <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+                </button>
+            </div>
+
+
+        </div>
+
+        <div id="nodeInfoPan" class="easyui-tabs"   style="width:320px;height:93%;position: fixed ! important; right: 15px; margin-top: 26px;font-size: 8px;opacity: 0.8;border: 1px solid #D4D4D4;">
+            <div title="基本信息" style="padding:20px;display:none;">
+                tab1
+            </div>
+            <div title="关联信息" style="overflow:auto;padding:20px;display:none;">
+                tab2
+            </div>
+            <div title="其他" style="padding:20px;display:none;">
+                tab3
+            </div>
+        </div>
+    </div>
+</div>
+<!-- import Vue.js -->
+<script src="//vuejs.org/js/vue.min.js"></script>
+<!-- import stylesheet -->
+<link rel="stylesheet" href="//unpkg.com/iview/dist/styles/iview.css">
+<!-- import iView -->
+<script src="//unpkg.com/iview/dist/iview.min.js"></script>
+<script src="../static/lib/easyui153/jquery.min.js"></script>
+<script src="../static/lib/easyui153/jquery.easyui.min.js"></script>
+<script src="../static/lib/bootstrap-3.3.7/js/bootstrap.js"></script>
+<script src="../static/js/bootstrap-confirmation.js"></script>
+<!--<script type="text/javascript" src="http://d3js.org/d3.v3.min.js"></script>-->
+<script src="../static/js/d3.v3.min.js"></script>
+<script src="../static/lib/nprogress/nprogress.js"></script>
+<script src="../static/js/dtqa.main.js"></script>
+<script src="../static/js/main/main-node-info.js"></script>
+<script src="../static/js/main/main.js"></script>
+
+</body>
+</html>
